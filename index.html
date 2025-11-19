@@ -10,12 +10,102 @@ Comment Out Code Command + /
     <meta charset="utf-8" />
     <title>Unit 4 - Flexbox</title>
     <style>
- 
+ body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(177, 106, 106, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #9e7e4f;
+  color: rgb(202, 188, 169);
+  transform: rotateY(180deg);
+}
+
+.main {
+  /*background-color: green; */
+  display: flex;
+  justify-content: space-evenly;
+}
     </style>
   </head>
   <body>
-    <h1>Jungle Animals</h1>
+    <h1>My fav games rn</h1>
 
-   
+    <div class="main">
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://upload.wikimedia.org/wikipedia/en/3/33/Dispatch_game_poster.jpg" alt="Avatar" style="width:300px;height:450px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Dispatch</h1> 
+      <p>Story & Decision based</p> 
+      <p>current fixation, such a fun game I love it so much</p>
+    </div>
+  </div>
+</div>
+
+
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Logo_of_Stardew_Valley.png" alt="Avatar" style="width:300px;height:450px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Stardew Valley</h1> 
+      <p>Cozy & Farming</p> 
+      <p>I get to live the life I wanna live for a bit</p>
+    </div>
+  </div>
+</div>
+
+
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://static.gabestore.ru/product/370x460_3s6gGZHOwKBpL6SbkPUpjpphsjJRrjod.jpg" alt="Avatar" style="width:300px;height:450px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Stray</h1> 
+      <p>story & exploration/ mystery</p> 
+      <p>I GET TO BE A CAT</p>
+    </div>
+  </div>
+</div>
+
+</div>
   </body>
 </html>
